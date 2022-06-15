@@ -24,8 +24,8 @@ export default StyleSheet.create({
     marginTop: 'auto',
 
     backgroundColor: '#fff',
-    borderTopLeftRadius: 12,
-    borderTopRightRadius: 12,
+    borderTopLeftRadius: 40,
+    borderTopRightRadius: 40,
 
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 10 },
