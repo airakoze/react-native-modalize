@@ -448,7 +448,7 @@ const ModalizeBase = (
     { nativeEvent }: PanGestureHandlerStateChangeEvent,
     type?: 'component' | 'children',
   ): void => {
-    const { timing } = closeAnimationConfig;
+    // const { timing } = closeAnimationConfig;
     const { velocityY, translationY } = nativeEvent;
     const negativeReverseScroll =
       modalPosition === 'top' &&
