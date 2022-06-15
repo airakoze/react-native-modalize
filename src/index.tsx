@@ -265,7 +265,7 @@ const ModalizeBase = (
 
     Animated.parallel([
       Animated.timing(overlay, {
-        toValue: alwaysOpenValue && dest === 'default' ? 0 : 1,
+        toValue: 1,
         duration: timing.duration,
         easing: Easing.ease,
         useNativeDriver: USE_NATIVE_DRIVER,
@@ -560,15 +560,6 @@ const ModalizeBase = (
       translateY.setValue(toValue);
       translateY.flattenOffset();
       dragY.setValue(0);
-
-      if (alwaysOpen) {
-        Animated.timing(overlay, {
-          toValue: Number(destSnapPoint <= 0),
-          duration: timing.duration,
-          easing: Easing.ease,
-          useNativeDriver: USE_NATIVE_DRIVER,
-        }).start();
-      }
 
       Animated.spring(translateY, {
         tension: 50,
